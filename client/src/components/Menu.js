@@ -4,6 +4,7 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import { Stack, TextField, Select, MenuItem, InputLabel, FormControl } from "@mui/material";
 import getResults from "../util";
 import { useNavigate } from "react-router-dom";
+import { blue } from "@mui/material/colors";
 
 /**
  * Takes in input from user about the product they would like to see the prices for and routes the request to Results page
@@ -47,6 +48,7 @@ function Menu() {
               variant="outlined"
               onChange={(e) => setSearchItem(e.target.value)}
             />
+
             <FormControl fullWidth>
               <InputLabel variant="outlined" htmlFor="outlined-basic1">
                 Website Name
@@ -66,9 +68,11 @@ function Menu() {
                 <MenuItem value="all">All</MenuItem>
               </Select>
             </FormControl>
+
             <Button size="medium" variant="contained" color="secondary" onClick={handleSubmission}>
               Search Item
             </Button>
+
           </Stack>
         ) : button === "Fetching" ? (
           <LoadingButton loading variant="outlined">

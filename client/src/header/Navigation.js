@@ -29,22 +29,7 @@ export default function Navigation() {
   return (
     <div className={classes.root}>
       <NavigationDrawer />
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-            onClick={context.toggleDrawer}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            SLASH
-          </Typography>
-        </Toolbar>
-      </AppBar>
+
     </div>
   );
 }
